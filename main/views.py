@@ -1,10 +1,14 @@
 from django.shortcuts import render,HttpResponse,get_object_or_404
-from .models import Aisle,Item
+# from .models import Aisle,Item
 
 
 # Create your views here.
 def index(request):
-    return render(request,"index.html")
+    aisle_numbers = range(1, 9)
+    return render(request, 'index.html', {'aisle_numbers': aisle_numbers,"aisles": range(1, 9),
+        "range_15": range(1, 16)})
+
+
 
 def restocking(request):
     aisles = Aisle.objects.all()
