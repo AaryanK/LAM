@@ -1,0 +1,42 @@
+[
+    {
+        "timestamp": "2025-01-18T01:07:07.308957",
+        "items": []
+    },
+    {
+        "timestamp": "2025-01-18T01:07:13.676214",
+        "items": [
+            {
+                "barcode": 1232480392,
+                "name": "Noodle",
+                "aisle": 8,
+                "cases": 12,
+                "image_path": "https://www.thaifood2u.co.uk/329-large_default/wai-wai-oriental-style-instant-noodles-60g.jpg"
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-01-18T16:25:44.784716",
+        "items": [
+            {
+                "barcode": "0016229901165",
+                "name": "Guava nectar ",
+                "aisle": 1,
+                "cases": 1,
+                "image_path": "https://sl.bing.net/kPdtVy1fwnA"
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-01-18T16:28:48.282032",
+        "items": [
+            {
+                "barcode": "0016229901165",
+                "name": "Guava nectar ",
+                "aisle": 1,
+                "cases": 1,
+                "image_path": "https://sl.bing.net/kPdtVy1fwnA"
+            }
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "barcode": "4808680230979",
+        "name": "Seasoning",
+        "aisle": 4,
+        "cases": 2
+    },
+    {
+        "barcode": "0016229901165",
+        "name": "Guava nectar ",
+        "aisle": 1,
+        "cases": 1,
+        "image_path":"https://sl.bing.net/kPdtVy1fwnA"
+    },
+    {
+        "barcode": "0721557420409",
+        "name": "Dragonfly rice vermicelli ",
+        "aisle": 7,
+        "cases": 2
+    }
+]

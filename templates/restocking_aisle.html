@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Restocking Aisle {{ aisle.number }}{% endblock title %}
+
+{% block body %}
+<div class="bg-gray-100 min-h-screen flex flex-col items-center px-4 py-8">
+    <!-- Title -->
+    <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-8 text-center">
+        Aisle {{ aisle.number }} - Restocking
+    </h1>
+
+    <!-- Shelf Layout Container -->
+    <div class="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0 lg:space-x-8 w-full max-w-7xl">
+        <!-- Shelf A -->
+        <div class="shelf-container w-full lg:w-1/2 bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4 text-center">Shelf A (Right Side)</h2>
+            <div class="grid grid-cols-4 gap-4">
+                {% for item in items %}
+                    {% if item.shelf == 'A' %}
+                    <div class="item-cell bg-blue-100 hover:bg-blue-200 text-gray-800 font-semibold p-4 rounded-md shadow-md text-center transition-transform transform hover:scale-105">
+                        {{ item.name }} <br>
+                        <span class="text-sm text-gray-600">Qty: {{ item.quantity }}</span>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Shelf B -->
+        <div class="shelf-container w-full lg:w-1/2 bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4 text-center">Shelf B (Left Side)</h2>
+            <div class="grid grid-cols-4 gap-4">
+                {% for item in items %}
+                    {% if item.shelf == 'B' %}
+                    <div class="item-cell bg-green-100 hover:bg-green-200 text-gray-800 font-semibold p-4 rounded-md shadow-md text-center transition-transform transform hover:scale-105">
+                        {{ item.name }} <br>
+                        <span class="text-sm text-gray-600">Qty: {{ item.quantity }}</span>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-8">
+        <a href="{% url 'restocking' %}" 
+           class="bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg px-6 py-3 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+            Back to Aisles
+        </a>
+    </div>
+</div>
+
+{% endblock body %}
